@@ -402,6 +402,46 @@ img {
   color: var(--accent-dark);
 }
 
+/* Additional Services Section */
+.additional-services {
+  background-color: var(--white);
+}
+
+.additional-services-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.additional-services-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 40px;
+  margin-bottom: 30px;
+}
+
+.additional-services-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.additional-services-list li svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.additional-services-note {
+  color: var(--gray);
+  font-size: 14px;
+  font-style: italic;
+}
+
 /* Pricing Section */
 .pricing {
   background-color: var(--white);

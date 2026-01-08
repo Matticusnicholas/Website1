@@ -59,6 +59,15 @@ const SERVICES = [
   }
 ];
 
+// Additional Services
+const ADDITIONAL_SERVICES = [
+  'Asian Massage',
+  'Hot Stone Massage',
+  'Cupping Therapy',
+  'Gua Sha Therapy',
+  'Body Scrub'
+];
+
 // Pricing Data
 const PRICING = [
   { name: '30 Minute Massage', price: '$50' },
@@ -194,6 +203,31 @@ function Services() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Additional Services Section
+function AdditionalServices() {
+  return (
+    <section className="section additional-services">
+      <div className="container">
+        <p className="section-subtitle">More Treatments</p>
+        <h2 className="section-title">We Also Offer</h2>
+        <div className="additional-services-content">
+          <ul className="additional-services-list">
+            {ADDITIONAL_SERVICES.map((service, index) => (
+              <li key={index}>
+                <CheckCircle size={20} />
+                <span>{service}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="additional-services-note">
+            Contact us for pricing and availability on these specialty treatments.
+          </p>
         </div>
       </div>
     </section>
@@ -449,6 +483,8 @@ function Footer() {
             <li><a href="#services">Relaxation Massage</a></li>
             <li><a href="#services">Deep Tissue</a></li>
             <li><a href="#services">Couple Massage</a></li>
+            <li><a href="#services">Asian Massage</a></li>
+            <li><a href="#services">Hot Stone</a></li>
           </ul>
         </div>
         <div className="footer-column">
@@ -476,6 +512,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <AdditionalServices />
         <Pricing />
         <About />
         <Hours />
