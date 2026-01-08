@@ -62,6 +62,7 @@ const SERVICES = [
 // Additional Services
 const ADDITIONAL_SERVICES = [
   'Asian Massage',
+  'Swedish Massage',
   'Hot Stone Massage',
   'Cupping Therapy',
   'Gua Sha Therapy',
