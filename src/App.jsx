@@ -43,13 +43,13 @@ const SERVICES = [
     icon: <Sparkles size={28} />,
     title: 'Relaxation Massage',
     description: 'Experience pure tranquility with our signature relaxation massage. Using gentle, flowing strokes to ease tension and promote deep relaxation throughout your body.',
-    prices: ['30 min - $50', '60 min - $70', '90 min - $110', '2 hours - $150']
+    prices: ['30 min - $50', '60 min - $70', '90 min - $110']
   },
   {
     icon: <Heart size={28} />,
     title: 'Deep Tissue Massage',
     description: 'Target chronic muscle tension with our therapeutic deep tissue massage. Ideal for athletes and those with persistent pain, using firm pressure to release deep-seated knots.',
-    prices: ['60 min - $80', '90 min - $120']
+    prices: ['60 min - $80', '90 min - $120', '2 hours - $150']
   },
   {
     icon: <Users size={28} />,
@@ -74,9 +74,9 @@ const PRICING = [
   { name: '30 Minute Massage', price: '$50' },
   { name: '60 Minute Massage', price: '$70' },
   { name: '90 Minute Massage', price: '$110' },
-  { name: '2 Hour Massage', price: '$150' },
   { name: '60 Min Deep Tissue', price: '$80' },
   { name: '90 Min Deep Tissue', price: '$120' },
+  { name: '2 Hour Deep Tissue', price: '$150' },
   { name: 'Couple Massage', price: '$140' }
 ];
 
