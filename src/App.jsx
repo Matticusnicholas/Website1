@@ -234,6 +234,34 @@ function AdditionalServices() {
   );
 }
 
+// Gallery Section
+function Gallery() {
+  const images = [
+    { src: '/public1.jpg', alt: 'Hot Stone Massage', caption: 'Hot Stone Therapy' },
+    { src: '/publci2.jpg', alt: 'Spa Facial Treatment', caption: 'Relaxing Spa Experience' },
+    { src: '/public3.jpg', alt: 'Professional Massage', caption: 'Expert Massage Therapy' }
+  ];
+
+  return (
+    <section className="section gallery">
+      <div className="container">
+        <p className="section-subtitle">Our Spa</p>
+        <h2 className="section-title">Experience Relaxation</h2>
+        <div className="gallery-grid">
+          {images.map((image, index) => (
+            <div key={index} className="gallery-item">
+              <img src={image.src} alt={image.alt} />
+              <div className="gallery-overlay">
+                <span>{image.caption}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // Pricing Section
 function Pricing() {
   return (
@@ -308,9 +336,7 @@ function About() {
             </div>
           </div>
           <div className="about-image">
-            <div className="about-image-placeholder">
-              <Leaf size={100} />
-            </div>
+            <img src="/public3.jpg" alt="Professional massage therapy" className="about-img" />
             <div className="about-image-border"></div>
           </div>
         </div>
@@ -513,6 +539,7 @@ function App() {
         <Hero />
         <Services />
         <AdditionalServices />
+        <Gallery />
         <Pricing />
         <About />
         <Hours />
