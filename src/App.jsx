@@ -21,6 +21,7 @@ const BUSINESS = {
   fullName: 'Elegant Blue Massage Spa, LLC',
   phone: '(727) 807-8086',
   phoneRaw: '7278078086',
+  bookingUrl: 'https://cal.com/elegantbluemassagespa',
   address: {
     street: '7671 Cita Lane',
     suite: 'Suite 102',
@@ -154,7 +155,7 @@ function Hero() {
           massage experience that rejuvenates your body and soul.
         </p>
         <div className="hero-buttons">
-          <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-primary">
+          <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             Book Appointment
           </a>
           <a href="#services" className="btn btn-secondary">
@@ -288,8 +289,8 @@ function Pricing() {
             ))}
           </div>
           <div className="pricing-cta">
-            <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-primary">
-              Call to Book Now
+            <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Book Now
             </a>
           </div>
         </div>
@@ -471,8 +472,8 @@ function CTA() {
         <div className="cta-phone">
           <a href={`tel:${BUSINESS.phoneRaw}`}>{BUSINESS.phone}</a>
         </div>
-        <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-primary">
-          Call Now to Book
+        <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          Book Online Now
         </a>
       </div>
     </section>
