@@ -11,7 +11,9 @@ import {
   Users,
   CheckCircle,
   Star,
-  Leaf
+  Leaf,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import './index.css';
 
@@ -236,28 +238,64 @@ function AdditionalServices() {
   );
 }
 
-// Gallery Section
-function Gallery() {
-  const images = [
-    { src: '/public1.jpg', alt: 'Hot Stone Massage', caption: 'Hot Stone Therapy' },
-    { src: '/publci2.jpg', alt: 'Spa Facial Treatment', caption: 'Relaxing Spa Experience' },
-    { src: '/public3.jpg', alt: 'Professional Massage', caption: 'Expert Massage Therapy' }
+// Slideshow Section
+function Slideshow() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    { src: '/spa-lobby.jpg', alt: 'Spa Reception', caption: 'Welcome to Our Spa' },
+    { src: '/spa-exterior.jpg', alt: 'Spa Exterior', caption: 'Visit Us Today' },
+    { src: '/spa-room.jpg', alt: 'Treatment Room', caption: 'Private Treatment Rooms' },
+    { src: '/spa-couples.jpg', alt: 'Couples Room', caption: 'Couples Massage Suite' },
+    { src: '/spa-ambiance.jpg', alt: 'Spa Ambiance', caption: 'Relaxing Atmosphere' }
   ];
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const goToSlide = (index) => setCurrentSlide(index);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+
   return (
-    <section className="section gallery">
+    <section className="section slideshow">
       <div className="container">
         <p className="section-subtitle">Our Spa</p>
-        <h2 className="section-title">Experience Relaxation</h2>
-        <div className="gallery-grid">
-          {images.map((image, index) => (
-            <div key={index} className="gallery-item">
-              <img src={image.src} alt={image.alt} />
-              <div className="gallery-overlay">
-                <span>{image.caption}</span>
+        <h2 className="section-title">Take a Look Inside</h2>
+        <div className="slideshow-container">
+          <div className="slideshow-wrapper">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`slide ${index === currentSlide ? 'active' : ''}`}
+              >
+                <img src={slide.src} alt={slide.alt} />
+                <div className="slide-caption">
+                  <span>{slide.caption}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <button className="slide-arrow prev" onClick={prevSlide} aria-label="Previous slide">
+            <ChevronLeft size={30} />
+          </button>
+          <button className="slide-arrow next" onClick={nextSlide} aria-label="Next slide">
+            <ChevronRight size={30} />
+          </button>
+          <div className="slide-dots">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentSlide ? 'active' : ''}`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -338,7 +376,7 @@ function About() {
             </div>
           </div>
           <div className="about-image">
-            <img src="/public3.jpg" alt="Professional massage therapy" className="about-img" />
+            <img src="/spa-lobby.jpg" alt="Elegant Blue Massage Spa lobby" className="about-img" />
             <div className="about-image-border"></div>
           </div>
         </div>
@@ -541,7 +579,7 @@ function App() {
         <Hero />
         <Services />
         <AdditionalServices />
-        <Gallery />
+        <Slideshow />
         <Pricing />
         <About />
         <Hours />
