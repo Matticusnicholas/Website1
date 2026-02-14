@@ -243,11 +243,11 @@ function Slideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { src: '/spa-lobby.jpg', alt: 'Spa Reception', caption: 'Welcome to Our Spa' },
-    { src: '/spa-exterior.jpg', alt: 'Spa Exterior', caption: 'Visit Us Today' },
-    { src: '/spa-room.jpg', alt: 'Treatment Room', caption: 'Private Treatment Rooms' },
-    { src: '/spa-couples.jpg', alt: 'Couples Room', caption: 'Couples Massage Suite' },
-    { src: '/spa-ambiance.jpg', alt: 'Spa Ambiance', caption: 'Relaxing Atmosphere' }
+    { src: '/images/spa-lobby.jpg', alt: 'Spa Reception', caption: 'Welcome to Our Spa' },
+    { src: '/images/spa-exterior.jpg', alt: 'Spa Exterior', caption: 'Visit Us Today' },
+    { src: '/images/spa-room.jpg', alt: 'Treatment Room', caption: 'Private Treatment Rooms' },
+    { src: '/images/spa-couples.jpg', alt: 'Couples Room', caption: 'Couples Massage Suite' },
+    { src: '/images/spa-ambiance.jpg', alt: 'Spa Ambiance', caption: 'Relaxing Atmosphere' }
   ];
 
   useEffect(() => {
@@ -376,7 +376,7 @@ function About() {
             </div>
           </div>
           <div className="about-image">
-            <img src="/spa-lobby.jpg" alt="Elegant Blue Massage Spa lobby" className="about-img" />
+            <img src="/images/spa-lobby.jpg" alt="Elegant Blue Massage Spa lobby" className="about-img" />
             <div className="about-image-border"></div>
           </div>
         </div>
