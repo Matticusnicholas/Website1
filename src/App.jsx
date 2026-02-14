@@ -64,6 +64,9 @@ const SERVICES = [
 
 // Additional Services
 const ADDITIONAL_SERVICES = [
+  'Chinese Tui Na Massage',
+  'Traditional Chinese Acupressure',
+  'Chinese Deep Tissue Therapy',
   'Asian Massage',
   'Swedish Massage',
   'Hot Stone Massage',
@@ -152,9 +155,7 @@ function Hero() {
         <p className="hero-subtitle">Welcome to</p>
         <h1 className="hero-title">{BUSINESS.name}</h1>
         <p className="hero-description">
-          Experience the art of relaxation at our tranquil spa in New Port Richey.
-          Our skilled therapists are dedicated to providing you with an exceptional
-          massage experience that rejuvenates your body and soul.
+          Chinese-inspired therapeutic massage & modern spa experience.
         </p>
         <div className="hero-buttons">
           <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
@@ -356,9 +357,8 @@ function About() {
             <p className="section-subtitle">About Us</p>
             <h2 className="section-title">Your Wellness Journey Starts Here</h2>
             <p className="about-description">
-              At {BUSINESS.name}, we believe that everyone deserves moments of peace
-              and relaxation. Our experienced massage therapists combine traditional
-              techniques with modern methods to deliver a truly rejuvenating experience.
+              We specialize in Chinese therapeutic techniques, including Tui Na, acupressure,
+              and deep tissue massage, combined with a modern spa environment.
             </p>
             <p className="about-description">
               Located in the heart of New Port Richey, our spa provides a serene escape
