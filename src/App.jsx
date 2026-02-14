@@ -46,7 +46,7 @@ const SERVICES = [
     icon: <Sparkles size={28} />,
     title: 'Relaxation Massage',
     description: 'Experience pure tranquility with our signature relaxation massage. Using gentle, flowing strokes to ease tension and promote deep relaxation throughout your body.',
-    prices: ['30 min - $50', '60 min - $70', '90 min - $110']
+    prices: ['60 min - $80', '90 min - $120', '2 hours - $150']
   },
   {
     icon: <Heart size={28} />,
@@ -77,12 +77,9 @@ const ADDITIONAL_SERVICES = [
 
 // Pricing Data
 const PRICING = [
-  { name: '30 Minute Massage', price: '$50' },
-  { name: '60 Minute Massage', price: '$70' },
-  { name: '90 Minute Massage', price: '$110' },
-  { name: '60 Min Deep Tissue', price: '$80' },
-  { name: '90 Min Deep Tissue', price: '$120' },
-  { name: '2 Hour Deep Tissue', price: '$150' },
+  { name: '60 Minute Massage', price: '$80' },
+  { name: '90 Minute Massage', price: '$120' },
+  { name: '2 Hour Massage', price: '$150' },
   { name: 'Couple Massage', price: '$140' }
 ];
 
