@@ -55,6 +55,12 @@ const SERVICES = [
     prices: ['60 min - $80', '90 min - $120', '2 hours - $150']
   },
   {
+    icon: <Leaf size={28} />,
+    title: 'Swedish Massage',
+    description: 'Classic Swedish massage technique using long, smooth strokes to improve circulation, ease muscle tension, and promote overall relaxation.',
+    prices: ['60 min - $70', '90 min - $110']
+  },
+  {
     icon: <Users size={28} />,
     title: 'Couple Massage',
     description: 'Share a relaxing experience with your partner in our serene couple\'s suite. Perfect for anniversaries, special occasions, or simply reconnecting together.',
@@ -68,7 +74,6 @@ const ADDITIONAL_SERVICES = [
   'Traditional Chinese Acupressure',
   'Chinese Deep Tissue Therapy',
   'Asian Massage',
-  'Swedish Massage',
   'Hot Stone Massage',
   'Cupping Therapy',
   'Gua Sha Therapy',
@@ -80,6 +85,8 @@ const PRICING = [
   { name: '60 Minute Massage', price: '$80' },
   { name: '90 Minute Massage', price: '$120' },
   { name: '2 Hour Massage', price: '$150' },
+  { name: '60 Min Swedish', price: '$70' },
+  { name: '90 Min Swedish', price: '$110' },
   { name: 'Couple Massage', price: '$140' }
 ];
 
