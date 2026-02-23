@@ -13,7 +13,8 @@ import {
   Star,
   Leaf,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Gift
 } from 'lucide-react';
 import './index.css';
 
@@ -146,6 +147,25 @@ function Header() {
         <a href={`tel:${BUSINESS.phoneRaw}`} onClick={closeMobileMenu}>{BUSINESS.phone}</a>
       </div>
     </>
+  );
+}
+
+// Promo Banner - Auto-hides after April 30, 2026
+function PromoBanner() {
+  const promoEndDate = new Date('2026-05-01T00:00:00');
+  const now = new Date();
+
+  if (now >= promoEndDate) {
+    return null;
+  }
+
+  return (
+    <div className="promo-banner">
+      <div className="promo-content">
+        <Gift size={20} />
+        <span><strong>$15 OFF</strong> your first visit! Valid through April 30th, 2026</span>
+      </div>
+    </div>
   );
 }
 
@@ -579,6 +599,7 @@ function App() {
   return (
     <>
       <Header />
+      <PromoBanner />
       <main>
         <Hero />
         <Services />
