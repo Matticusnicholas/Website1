@@ -53,13 +53,13 @@ const SERVICES = [
     icon: <Heart size={28} />,
     title: 'Deep Tissue Massage',
     description: 'Target chronic muscle tension with our therapeutic deep tissue massage. Ideal for athletes and those with persistent pain, using firm pressure to release deep-seated knots.',
-    prices: ['60 min - $80', '90 min - $120', '2 hours - $150']
+    prices: ['30 min - $50', '60 min - $80', '90 min - $120', '2 hours - $150']
   },
   {
     icon: <Leaf size={28} />,
     title: 'Swedish Massage',
     description: 'Classic Swedish massage technique using long, smooth strokes to improve circulation, ease muscle tension, and promote overall relaxation.',
-    prices: ['60 min - $70', '90 min - $110']
+    prices: ['30 min - $50', '60 min - $70', '90 min - $110']
   },
   {
     icon: <Users size={28} />,
@@ -83,6 +83,7 @@ const ADDITIONAL_SERVICES = [
 
 // Pricing Data
 const PRICING = [
+  { name: '30 Minute Massage', price: '$50' },
   { name: '60 Minute Massage', price: '$80' },
   { name: '90 Minute Massage', price: '$120' },
   { name: '2 Hour Massage', price: '$150' },
